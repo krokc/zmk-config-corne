@@ -98,7 +98,7 @@
             bindings = <
 &kp CAPS    &kp EXCL  &kp AT  &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET     &kp AMPS       &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LSHIFT  &trans    &trans  &trans    &kp UNDERSCORE  &kp PLUS     &kp ASTERISK  &kp EQUAL      &kp PG_UP  &kp LBKT  &kp RBKT  &kp GRAVE
-&kp LCTRL   &trans    &trans  &trans    &trans          &kp MINUS    &kp SLASH     &kp BACKSLASH  &kt PG_DN  &kp LBRC  &kp RBRC  &kp TILDE
+&kp LCTRL   &trans    &trans  &trans    &trans          &kp MINUS    &kp KP_SLASH  &kp BACKSLASH  &kt PG_DN  &kp LBRC  &kp RBRC  &kp TILDE
                               &kp LGUI  &mo 3           &kp SPACE    &kp ENTER     &trans         &kp LALT
             >;
         };
