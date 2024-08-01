@@ -91,7 +91,7 @@
 
             bindings = <
 &kp CAPS    &trans        &trans    &kp UP    &kp LS(LCTRL)  &kp ASTERISK       &kp EQUAL       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
-&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT      &kp PLUS           &kp KP_MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &kp PRINTSCREEN
+&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT      &kp PLUS           &kp KP_MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &kp PSCRN
 &kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL        &tapdance_slash    &kp UNDERSCORE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &kp TILDE
                                     &trans    &trans         &kp ENTER          &kp SPACE       &kp KP_NUMBER_0  &kp KP_DOT
             >;
