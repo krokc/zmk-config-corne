@@ -23,9 +23,9 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        kh_hs_tapdance: kh_hs_tapdance {
+        tapdance_brackets: tapdance_brackets {
             compatible = "zmk,behavior-tap-dance";
-            label = "KH_HS_TAPDANCE";
+            label = "TAPDANCE_BRACKETS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
@@ -62,6 +62,20 @@
             #binding-cells = <0>;
             bindings = <&kp KP_SLASH>, <&kp BACKSLASH>;
         };
+
+        tapdance_braces: tapdance_braces {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_BRACES";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+        };
+
+        tapdance_paranthesis: tapdance_paranthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_PARANTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RIGHT_PARENTHESIS>;
+        };
     };
 
     keymap {
@@ -90,7 +104,7 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC     &trans        &trans    &kp UP    &kp LS(LCTRL)  &kp ASTERISK       &kp EQUAL       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
+&kp ESC     &kp CAPS      &trans    &kp UP    &kp LS(LCTRL)  &kp ASTERISK       &kp EQUAL       &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
 &kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT      &kp PLUS           &kp KP_MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &kp PSCRN
 &kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL        &tapdance_slash    &kp UNDERSCORE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &kp TILDE
                                     &trans    &trans         &kp ENTER          &kp SPACE       &kp KP_NUMBER_0  &kp KP_DOT
@@ -105,9 +119,9 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans  &trans  &trans   &trans   &trans       &trans     &kp AMPERSAND    &kp ASTRK    &kp LPAR   &kp RPAR          &kp BSPC
-&kp LSHIFT  &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &trans     &kp DOLLAR       &kp PERCENT  &kp LCTRL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LCTRL   &kp F6  &kp F7  &kp F10  &kp F11  &kp F12      &trans     &kp EXCLAMATION  &kt AT_SIGN  &kp HASH   &kp LEFT_BRACE    &kp RIGHT_BRACE
+&kp ESC     &trans  &trans  &trans   &trans   &trans       &trans     &kp AMPERSAND    &kp ASTRK    &tapdance_paranthesis  &kp RPAR            &kp BSPC
+&kp LSHIFT  &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &trans     &kp DOLLAR       &kp PERCENT  &kp LCTRL              &tapdance_brackets  &kp RIGHT_BRACKET
+&kp LCTRL   &kp F6  &kp F7  &kp F10  &kp F11  &kp F12      &trans     &kp EXCLAMATION  &kt AT_SIGN  &kp HASH               &tapdance_braces    &kp RIGHT_BRACE
                             &trans   &mo 3    &kp SPACE    &kp ENTER  &trans           &kp LALT
             >;
         };
@@ -123,9 +137,9 @@
 
         games_layer {
             bindings = <
-&kp ESC  &kp TAB     &kp Q  &kp W     &kp E      &kp R        &kp Y   &trans    &trans  &trans  &trans  &trans
-&trans   &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp G   &trans    &trans  &trans  &trans  &trans
-&kp V    &kp LCTRL   &kp Z  &kp X     &kp C      &kp T        &trans  &trans    &trans  &trans  &trans  &trans
+&kp ESC  &kp TAB     &kp Q  &kp W     &kp E      &kp R        &kp Y   &kp U     &kp I   &kp O   &kp P   &kp BACKSPACE
+&kp F5   &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp G   &kp J     &kp K   &kp L   &trans  &trans
+&kp V    &kp LCTRL   &kp Z  &kp X     &kp C      &kp T        &kp N   &kp M     &trans  &trans  &trans  &trans
                             &kp LALT  &kp SPACE  &kp ENTER    &trans  &kp LGUI  &trans
             >;
         };
