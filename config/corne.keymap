@@ -49,25 +49,18 @@
             bindings = <&kp TAB>, <&kp ESC>;
         };
 
-        tapdance_up: tapdance_up {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_UP";
-            #binding-cells = <0>;
-            bindings = <&kp UP>, <&kp LG(UP)>;
-        };
-
-        tapdance_down: tapdance_down {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANCE_DOWN";
-            #binding-cells = <0>;
-            bindings = <&kp DOWN>, <&kp LG(DOWN)>;
-        };
-
         tapdance_Mznak: tapdance_Mznak {
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANCE_MZNAK";
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp RBKT>;
+        };
+
+        tapdance_slash: tapdance_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp KP_SLASH>, <&kp BACKSLASH>;
         };
     };
 
@@ -82,10 +75,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&tapdance_tab_esc  &kp Q  &kp W  &kp E                   &kp R        &kp T        &kp Y      &kp U            &kp I         &kp O    &kp P     &kp BSPC
-&mt LSHIFT GRAVE   &kp A  &kp S  &kp D                   &kp F        &kp G        &kp H      &kp J            &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LCTRL          &kp Z  &kp X  &kp C                   &kp V        &kp B        &kp N      &tapdance_Mznak  &kp COMMA     &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                                 &holdtap_TUI LALT LGUI  &lt 1 SPACE  &kp ENTER    &kp ENTER  &mo 2            &kp LEFT_ALT
+&tapdance_tab_esc  &kp Q  &kp W  &kp E                   &kp R        &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSPC
+&mt LSHIFT GRAVE   &kp A  &kp S  &kp D                   &kp F        &kp G        &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL          &kp Z  &kp X  &kp C                   &kp V        &kp B        &kp N      &tapdance_Mznak  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
+                                 &holdtap_TUI LALT LGUI  &lt 1 SPACE  &kp ENTER    &kp ENTER  &mo 2            &trans
             >;
         };
 
@@ -97,10 +90,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC          &trans      &trans     &tapdance_up    &trans       &kp ASTERISK    &kp KP_EQUAL    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
-&mt LSHIFT CAPS  &kp DEL     &kp LEFT   &tapdance_down  &kp RIGHT    &kp PLUS        &kp KP_MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &trans
-&kp LCTRL        &kp K_UNDO  &kp K_CUT  &kp K_COPY      &kp K_PASTE  &kp KP_SLASH    &kp UNDERSCORE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &trans
-                                        &kp LALT        &trans       &kp SPACE       &kp ENTER       &kp KP_NUMBER_0  &kp LALT
+&kp CAPS    &trans  &trans    &kp UP    &trans     &kp ASTERISK       &kp KP_EQUAL_AS400  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
+&kp LSHIFT  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PLUS           &kp KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &trans
+&kp LCTRL   &trans  &trans    &trans    &kp DEL    &tapdance_slash    &kp UNDERSCORE      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &kp TILDE
+                              &trans    &trans     &kp ENTER          &kp SPACE           &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
@@ -112,10 +105,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS       &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LSHIFT  &trans    &trans  &trans    &trans    &trans       &kp ASTERISK  &kp EQUAL      &kp PG_UP  &kp LBKT  &kp RBKT  &kp GRAVE
-&kp LCTRL   &trans    &trans  &trans    &trans    &trans       &kp KP_SLASH  &kp BACKSLASH  &kt PG_DN  &kp LBRC  &kp RBRC  &kp TILDE
-                              &kp LGUI  &mo 3     &kp SPACE    &kp ENTER     &trans         &kp LALT
+&trans      &trans  &trans  &trans    &trans  &trans       &trans     &kp AMPERSAND    &kp ASTRK    &kp LPAR   &kp RPAR          &kp BSPC
+&kp LSHIFT  &trans  &trans  &trans    &trans  &trans       &trans     &kp DOLLAR       &kp PERCENT  &kp LCTRL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LCTRL   &trans  &trans  &trans    &trans  &trans       &trans     &kp EXCLAMATION  &kt AT_SIGN  &kp HASH   &kp LEFT_BRACE    &kp RIGHT_BRACE
+                            &kp LGUI  &mo 3   &kp SPACE    &kp ENTER  &trans           &kp LALT
             >;
         };
 
