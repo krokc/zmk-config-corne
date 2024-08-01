@@ -67,7 +67,16 @@
             compatible = "zmk,behavior-tap-dance";
             label = "TAPDANSE_LAYER1_SPASE";
             #binding-cells = <0>;
-            bindings = <&lt 1 SPACE>, <&kp SPACE>;
+            bindings = <&holdtap_spase 1 SPACE>, <&kp SPACE>;
+        };
+
+        holdtap_spase: holdtap_spase {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAP_SPASE";
+            bindings = <&lt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
@@ -112,10 +121,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&trans      &trans  &trans  &trans  &trans  &trans       &trans     &kp AMPERSAND    &kp ASTRK    &kp LPAR   &kp RPAR          &kp BSPC
-&kp LSHIFT  &trans  &trans  &trans  &trans  &trans       &trans     &kp DOLLAR       &kp PERCENT  &kp LCTRL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
-&kp LCTRL   &trans  &trans  &trans  &trans  &trans       &trans     &kp EXCLAMATION  &kt AT_SIGN  &kp HASH   &kp LEFT_BRACE    &kp RIGHT_BRACE
-                            &trans  &mo 3   &kp SPACE    &kp ENTER  &trans           &kp LALT
+&trans      &trans  &trans  &trans   &trans   &trans       &trans     &kp AMPERSAND    &kp ASTRK    &kp LPAR   &kp RPAR          &kp BSPC
+&kp LSHIFT  &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &trans     &kp DOLLAR       &kp PERCENT  &kp LCTRL  &kp LEFT_BRACKET  &kp RIGHT_BRACKET
+&kp LCTRL   &kp F6  &kp F7  &kp F10  &kp F11  &kp F12      &trans     &kp EXCLAMATION  &kt AT_SIGN  &kp HASH   &kp LEFT_BRACE    &kp RIGHT_BRACE
+                            &trans   &mo 3    &kp SPACE    &kp ENTER  &trans           &kp LALT
             >;
         };
 
