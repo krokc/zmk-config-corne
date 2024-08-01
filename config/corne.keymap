@@ -78,7 +78,7 @@
 &tapdance_tab_esc  &kp Q  &kp W  &kp E          &kp R        &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSPC
 &mt LSHIFT GRAVE   &kp A  &kp S  &kp D          &kp F        &kp G        &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL          &kp Z  &kp X  &kp C          &kp V        &kp B        &kp N      &tapdance_Mznak  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                                 &mt LALT LGUI  &lt 1 SPACE  &kp SPACE    &kp ENTER  &mo 2            &trans
+                                 &mt LALT LGUI  &lt 1 SPACE  &kp SPACE    &kp ENTER  &mo 2            &tog 4
             >;
         };
 
@@ -118,6 +118,15 @@
 &trans  &trans  &trans      &out OUT_TOG  &out OUT_BLE    &out OUT_USB    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans      &trans        &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans
                             &trans        &trans          &trans          &trans  &trans  &trans
+            >;
+        };
+
+        games_layer {
+            bindings = <
+&kp ESC    &kp TAB     &kp Q  &kp W     &kp E  &kp R        &kp Y   &trans  &trans  &trans  &trans  &trans
+&trans     &kp LSHIFT  &kp A  &kp S     &kp D  &kp F        &trans  &trans  &trans  &trans  &trans  &trans
+&kp ENTER  &kp LCTRL   &kp Z  &kp X     &kp C  &kp T        &trans  &trans  &trans  &trans  &trans  &trans
+                              &kp LALT  &mo 1  &kp SPACE    &trans  &trans  &tog 0
             >;
         };
     };
