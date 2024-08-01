@@ -63,13 +63,6 @@
             bindings = <&kp KP_SLASH>, <&kp BACKSLASH>;
         };
 
-        tapdanse_layer1_spase: tapdanse_layer1_spase {
-            compatible = "zmk,behavior-tap-dance";
-            label = "TAPDANSE_LAYER1_SPASE";
-            #binding-cells = <0>;
-            bindings = <&holdtap_spase 1 SPACE>, <&kp SPACE>;
-        };
-
         holdtap_spase: holdtap_spase {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDTAP_SPASE";
@@ -94,7 +87,7 @@
 &tapdance_tab_esc  &kp Q  &kp W  &kp E          &kp R                   &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSPC
 &mt LSHIFT GRAVE   &kp A  &kp S  &kp D          &kp F                   &kp G        &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
 &kp LCTRL          &kp Z  &kp X  &kp C          &kp V                   &kp B        &kp N      &tapdance_Mznak  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                                 &mt LALT LGUI  &tapdanse_layer1_spase  &kp ENTER    &kp ENTER  &mo 2            &trans
+                                 &mt LALT LGUI  &holdtap_spase 1 SPACE  &kp ENTER    &kp ENTER  &mo 2            &trans
             >;
         };
 
