@@ -90,10 +90,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp CAPS    &trans  &trans    &kp UP    &trans     &kp ASTERISK       &kp KP_EQUAL_AS400  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
-&kp LSHIFT  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PLUS           &kp KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &trans
-&kp LCTRL   &trans  &trans    &trans    &kp DEL    &tapdance_slash    &kp UNDERSCORE      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &kp TILDE
-                              &trans    &trans     &kp ENTER          &kp SPACE           &kp KP_NUMBER_0  &kp KP_DOT
+&kp CAPS    &trans  &trans    &kp UP    &trans     &kp ASTERISK     &kp KP_EQUAL_AS400  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
+&kp LSHIFT  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &kp PLUS         &kp KP_MINUS        &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &trans
+&kp LCTRL   &trans  &trans    &trans    &kp DEL    &kp LS(LCTRL)    &kp UNDERSCORE      &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &kp TILDE
+                              &trans    &trans     &kp ENTER        &kp SPACE           &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
