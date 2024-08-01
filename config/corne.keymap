@@ -11,20 +11,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
-        };
-
-        tverd_znak {
-            bindings = <&kp RIGHT_BRACKET>;
-            key-positions = <12 31>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         ss_hs_modmorph: ss_hs_modmorph {
@@ -44,14 +31,43 @@
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
 
-        hrm: hrm {
+        holdtap_TUI: holdtap_TUI {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
+
+            label = "HOLDTAP_TUI";
+        };
+
+        tapdance_tab_esc: tapdance_tab_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_TAB_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+        };
+
+        tapdance_up: tapdance_up {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_UP";
+            #binding-cells = <0>;
+            bindings = <&kp UP>, <&kp LG(UP)>;
+        };
+
+        tapdance_down: tapdance_down {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_DOWN";
+            #binding-cells = <0>;
+            bindings = <&kp DOWN>, <&kp LG(DOWN)>;
+        };
+
+        tapdance_Mznak: tapdance_Mznak {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_MZNAK";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp RBKT>;
         };
     };
 
@@ -66,10 +82,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R  &kp T        &kp Y      &kp U  &kp I         &kp O    &kp P     &kp BSPC
-&kp LSHIFT  &kp A  &kp S  &kp D     &kp F  &kp G        &kp H      &kp J  &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LCTRL   &kp Z  &kp X  &kp C     &kp V  &kp B        &kp N      &kp M  &kp COMMA     &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                          &kp LGUI  &mo 1  &kp SPACE    &kp ENTER  &mo 2  &kp LEFT_ALT
+&tapdance_tab_esc  &kp Q  &kp W  &kp E                   &kp R        &kp T        &kp Y      &kp U            &kp I         &kp O    &kp P     &kp BSPC
+&mt LSHIFT GRAVE   &kp A  &kp S  &kp D                   &kp F        &kp G        &kp H      &kp J            &kp K         &kp L    &kp SEMI  &kp SQT
+&kp LCTRL          &kp Z  &kp X  &kp C                   &kp V        &kp B        &kp N      &tapdance_Mznak  &kp COMMA     &kp DOT  &kp FSLH  &kp LEFT_BRACKET
+                                 &holdtap_TUI LGUI LALT  &lt 1 SPACE  &kp ENTER    &kp ENTER  &mo 2            &kp LEFT_ALT
             >;
         };
 
@@ -81,10 +97,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC     &kp N1     &kp N2     &kp N3    &kp N4     &kp N5           &kp N6     &kp N7   &kp N8    &kp N9  &kp N0  &kp BSPC
-&kp LSHIFT  &kp GRAVE  &kp ENTER  &kp UP    &trans     &kp BACKSPACE    &kp F1     &kp F2   &kp F3    &kp F4  &kp F5  &kp F6
-&kp LCTRL   &kp LALT   &kp LEFT   &kp DOWN  &kp RIGHT  &kp DEL          &kp F12    &kp F11  &kp F10   &kp F9  &kp F8  &kp F7
-                                  &kp LGUI  &trans     &kp SPACE        &kp ENTER  &trans   &kp LALT
+&kp ESC          &trans      &trans     &tapdance_up    &trans       &kp ASTERISK    &kp KP_EQUAL    &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &trans     &kp BSPC
+&mt LSHIFT CAPS  &kp DEL     &kp LEFT   &tapdance_down  &kp RIGHT    &kp PLUS        &kp KP_MINUS    &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp PG_UP  &trans
+&kp LCTRL        &kp K_UNDO  &kp K_CUT  &kp K_COPY      &kp K_PASTE  &kp KP_SLASH    &kp UNDERSCORE  &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp PG_DN  &trans
+                                        &kp LALT        &trans       &kp SPACE       &kp ENTER       &kp KP_NUMBER_0  &kp LALT
             >;
         };
 
@@ -96,10 +112,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp CAPS    &kp EXCL  &kp AT  &kp HASH  &kp DLLR        &kp PRCNT    &kp CARET     &kp AMPS       &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LSHIFT  &trans    &trans  &trans    &kp UNDERSCORE  &kp PLUS     &kp ASTERISK  &kp EQUAL      &kp PG_UP  &kp LBKT  &kp RBKT  &kp GRAVE
-&kp LCTRL   &trans    &trans  &trans    &trans          &kp MINUS    &kp KP_SLASH  &kp BACKSLASH  &kt PG_DN  &kp LBRC  &kp RBRC  &kp TILDE
-                              &kp LGUI  &mo 3           &kp SPACE    &kp ENTER     &trans         &kp LALT
+&trans      &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET     &kp AMPS       &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
+&kp LSHIFT  &trans    &trans  &trans    &trans    &trans       &kp ASTERISK  &kp EQUAL      &kp PG_UP  &kp LBKT  &kp RBKT  &kp GRAVE
+&kp LCTRL   &trans    &trans  &trans    &trans    &trans       &kp KP_SLASH  &kp BACKSLASH  &kt PG_DN  &kp LBRC  &kp RBRC  &kp TILDE
+                              &kp LGUI  &mo 3     &kp SPACE    &kp ENTER     &trans         &kp LALT
             >;
         };
 
