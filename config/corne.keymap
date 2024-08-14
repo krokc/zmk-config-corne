@@ -102,7 +102,6 @@
             bindings = <&kp>, <&kp>;
 
             #binding-cells = <2>;
-            require-prior-idle-ms = <125>;
             tapping-term-ms = <200>;
         };
     };
