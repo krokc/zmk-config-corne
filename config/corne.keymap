@@ -148,7 +148,7 @@
             bindings = <
 &kp ESC     &trans  &trans  &trans   &trans   &trans       &trans  &kp AMPERSAND    &kp ASTRK    &tapdance_paranthesis  &kp RPAR            &kp BSPC
 &kp LSHIFT  &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &trans  &kp DOLLAR       &kp PERCENT  &kp CARET              &tapdance_brackets  &kp RIGHT_BRACKET
-&kp LCTRL   &kp F6  &kp F7  &kp F10  &kp F11  &kp F12      &trans  &kp EXCLAMATION  &kp AT       &kp HASH               &tapdance_braces    &kp RIGHT_BRACE
+&kp LCTRL   &kp F6  &kp F7  &kp F10  &kp F11  &kp F12      &trans  &kp EXCLAMATION  &kp AT_SIGN  &kp HASH               &tapdance_braces    &kp RIGHT_BRACE
                             &trans   &mo 3    &kp SPACE    &trans  &trans           &trans
             >;
         };
