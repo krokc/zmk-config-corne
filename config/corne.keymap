@@ -53,8 +53,6 @@
             label = "TAPDANCE_MZNAK";
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp RBKT>;
-
-            tapping-term-ms = <100>;
         };
 
         tapdance_slash: tapdance_slash {
