@@ -53,6 +53,8 @@
             label = "TAPDANCE_MZNAK";
             #binding-cells = <0>;
             bindings = <&kp M>, <&kp RBKT>;
+
+            tapping-term-ms = <100>;
         };
 
         tapdance_slash: tapdance_slash {
@@ -82,7 +84,6 @@
             bindings = <&mo>, <&kp>;
 
             #binding-cells = <2>;
-            require-prior-idle-ms = <125>;
             tapping-term-ms = <200>;
         };
 
