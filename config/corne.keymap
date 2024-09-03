@@ -130,10 +130,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC     &kp CAPS      &trans    &kp UP    &kp LS(LCTRL)  &kp ASTERISK       &kp EQUAL       &kp N7           &kp N8        &kp N9        &kp PG_UP  &kp BSPC
-&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT      &kp PLUS           &kp KP_MINUS    &kp NUMBER_4     &kp N5        &kp NUMBER_6  &trans     &kp PSCRN
-&kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL        &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp PG_DN  &kp TILDE
-                                    &trans    &trans         &kp ENTER          &kp SPACE       &kp KP_NUMBER_0  &kp KP_DOT
+&kp ESC     &kp CAPS      &trans    &kp UP    &kp LC(LEFT_SHIFT)  &kp ASTERISK       &kp EQUAL       &kp N7           &kp N8        &kp N9        &kp PG_UP  &kp BSPC
+&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT           &kp PLUS           &kp KP_MINUS    &kp NUMBER_4     &kp N5        &kp NUMBER_6  &trans     &kp PSCRN
+&kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL             &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1     &kp NUMBER_2  &kp NUMBER_3  &kp PG_DN  &kp TILDE
+                                    &trans    &trans              &kp ENTER          &kp SPACE       &kp KP_NUMBER_0  &kp KP_DOT
             >;
         };
 
