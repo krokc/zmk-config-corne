@@ -66,21 +66,18 @@
             bindings = <&kp NUMBER_8>;
             key-positions = <15 36>;
             timeout-ms = <200>;
-            layers = <4>;
         };
 
         game_layer_nine {
             bindings = <&kp NUMBER_9>;
             key-positions = <14 36>;
             timeout-ms = <200>;
-            layers = <4>;
         };
 
         game_layer_zero {
             bindings = <&kp NUMBER_0>;
-            key-positions = <13 36>;
+            key-positions = <13 37>;
             timeout-ms = <200>;
-            layers = <4>;
         };
     };
 
