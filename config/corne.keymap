@@ -7,7 +7,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
-#include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/outputs.h>
 
 / {
@@ -51,35 +50,37 @@
 
         game_layer_six {
             bindings = <&kp NUMBER_6>;
-            key-positions = <37 17>;
+            key-positions = <36 5>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_seven {
             bindings = <&kp NUMBER_7>;
-            key-positions = <37 16>;
+            key-positions = <16 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_eight {
             bindings = <&kp NUMBER_8>;
-            key-positions = <37 15>;
+            key-positions = <15 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_nine {
             bindings = <&kp NUMBER_9>;
-            key-positions = <37 14>;
+            key-positions = <14 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_zero {
             bindings = <&kp NUMBER_0>;
-            key-positions = <37 13>;
+            key-positions = <13 36>;
+            timeout-ms = <200>;
+            layers = <4>;
         };
     };
 
@@ -175,15 +176,6 @@
         };
     };
 
-    macros {
-        kp_dot: kp_dot {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp KP_DOT>;
-            label = "KP_DOT";
-        };
-    };
-
     keymap {
         compatible = "zmk,keymap";
 
@@ -213,7 +205,7 @@
 &kp ESC     &kp CAPS      &trans    &kp UP    &kp LC(LEFT_SHIFT)  &kp ASTERISK       &kp EQUAL       &kp N7        &kp N8        &kp N9        &kp PG_UP  &kp BSPC
 &kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT           &kp PLUS           &kp KP_MINUS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &kp PSCRN
 &kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL             &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PG_DN  &kp TILDE
-                                    &trans    &trans              &kp ENTER          &kp SPACE       &kp NUMBER_0  &kt KP_DOT
+                                    &trans    &trans              &kp ENTER          &kp SPACE       &kp NUMBER_0  &kp KP_DOT
             >;
         };
 
