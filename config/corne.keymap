@@ -50,34 +50,37 @@
 
         game_layer_six {
             bindings = <&kp NUMBER_6>;
-            key-positions = <36 5>;
+            key-positions = <17 37>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_seven {
             bindings = <&kp NUMBER_7>;
-            key-positions = <16 36>;
+            key-positions = <16 37>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_eight {
             bindings = <&kp NUMBER_8>;
-            key-positions = <15 36>;
+            key-positions = <15 37>;
             timeout-ms = <200>;
+            layers = <4>;
         };
 
         game_layer_nine {
             bindings = <&kp NUMBER_9>;
-            key-positions = <14 36>;
+            key-positions = <14 37>;
             timeout-ms = <200>;
+            layers = <4>;
         };
 
         game_layer_zero {
             bindings = <&kp NUMBER_0>;
             key-positions = <13 37>;
             timeout-ms = <200>;
+            layers = <4>;
         };
     };
 
