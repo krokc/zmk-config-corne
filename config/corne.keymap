@@ -29,56 +29,49 @@
 
         game_layer_tree {
             bindings = <&kp NUMBER_3>;
-            key-positions = <3 37>;
+            key-positions = <37 4>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_four {
             bindings = <&kp NUMBER_4>;
-            key-positions = <37 4>;
+            key-positions = <37 5>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_fife {
             bindings = <&kp NUMBER_5>;
-            key-positions = <37 5>;
+            key-positions = <37 17>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
-        game_layer_six {
+        game_layer_six_1 {
             bindings = <&kp NUMBER_6>;
-            key-positions = <17 37>;
+            key-positions = <37 16>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_seven {
             bindings = <&kp NUMBER_7>;
-            key-positions = <16 37>;
+            key-positions = <37 15>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_eight {
             bindings = <&kp NUMBER_8>;
-            key-positions = <15 37>;
+            key-positions = <37 14>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_nine {
             bindings = <&kp NUMBER_9>;
-            key-positions = <14 37>;
-            timeout-ms = <200>;
-            layers = <4>;
-        };
-
-        game_layer_zero {
-            bindings = <&kp NUMBER_0>;
-            key-positions = <13 37>;
+            key-positions = <37 13>;
             timeout-ms = <200>;
             layers = <4>;
         };
