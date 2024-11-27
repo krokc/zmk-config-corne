@@ -13,23 +13,74 @@
     combos {
         compatible = "zmk,combos";
 
-        one {
+        game_layer_one {
             bindings = <&kp NUMBER_1>;
-            key-positions = <36 1>;
-            timeout-ms = <100>;
-            layers = <0>;
-        };
-
-        two {
-            bindings = <&kp NUMBER_2>;
-            key-positions = <36 2>;
+            key-positions = <1 37>;
             timeout-ms = <200>;
+            layers = <4>;
         };
 
-        three {
+        game_layer_two {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <2 37>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_tree {
             bindings = <&kp NUMBER_3>;
-            key-positions = <36 3>;
-            timeout-ms = <300>;
+            key-positions = <3 37>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_four {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <37 4>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_fife {
+            bindings = <&kp NUMBER_5>;
+            key-positions = <37 5>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_six {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <37 17>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_seven {
+            bindings = <&kp NUMBER_7>;
+            key-positions = <37 16>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_eight {
+            bindings = <&kp NUMBER_8>;
+            key-positions = <37 15>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_nine {
+            bindings = <&kp NUMBER_9>;
+            key-positions = <37 14>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_zero {
+            bindings = <&kp NUMBER_0>;
+            key-positions = <37 13>;
+            timeout-ms = <200>;
+            layers = <4>;
         };
     };
 
@@ -126,11 +177,11 @@
     };
 
     macros {
-        new_macro: new_macro {
+        kp_dot: kp_dot {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LS(H) &kp E &kp L &kp L &kp O>;
-            label = "NEW_MACRO";
+            bindings = <&kp DOT>;
+            label = "KP_DOT";
         };
     };
 
@@ -160,10 +211,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp ESC     &kp CAPS      &trans    &kp UP    &kp LC(LEFT_SHIFT)  &kp ASTERISK       &kp EQUAL       &kp N7        &kp N8        &kp N9        &kp PG_UP   &kp BSPC
-&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT           &kp PLUS           &kp KP_MINUS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &new_macro  &kp PSCRN
-&kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL             &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PG_DN   &kp TILDE
-                                    &trans    &trans              &kp ENTER          &kp SPACE       &kp KP_N0     &kp PERIOD
+&kp ESC     &kp CAPS      &trans    &kp UP    &kp LC(LEFT_SHIFT)  &kp ASTERISK       &kp EQUAL       &kp N7        &kp N8        &kp N9        &kp PG_UP  &kp BSPC
+&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN  &kp RIGHT           &kp PLUS           &kp KP_MINUS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &kp PSCRN
+&kp LCTRL   &kp LG(DOWN)  &trans    &trans    &kp DEL             &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PG_DN  &kp TILDE
+                                    &trans    &trans              &kp ENTER          &kp SPACE       &kp NUMBER_0  &kp_dot
             >;
         };
 
