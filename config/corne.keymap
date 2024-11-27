@@ -80,8 +80,6 @@
         game_layer_zero {
             bindings = <&kp NUMBER_0>;
             key-positions = <37 13>;
-            timeout-ms = <200>;
-            layers = <4>;
         };
     };
 
