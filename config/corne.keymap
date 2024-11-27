@@ -43,35 +43,28 @@
 
         game_layer_fife {
             bindings = <&kp NUMBER_5>;
-            key-positions = <37 17>;
+            key-positions = <5 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_six {
             bindings = <&kp NUMBER_6>;
-            key-positions = <5 36>;
+            key-positions = <36 4>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_seven {
             bindings = <&kp NUMBER_7>;
-            key-positions = <4 36>;
+            key-positions = <36 2>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_eight {
             bindings = <&kp NUMBER_8>;
-            key-positions = <36 2>;
-            timeout-ms = <200>;
-            layers = <4>;
-        };
-
-        game_layer_nine {
-            bindings = <&kp NUMBER_9>;
-            key-positions = <1 36>;
+            key-positions = <36 1>;
             timeout-ms = <200>;
             layers = <4>;
         };
