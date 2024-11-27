@@ -48,30 +48,30 @@
             layers = <4>;
         };
 
-        game_layer_six_1 {
+        game_layer_six {
             bindings = <&kp NUMBER_6>;
-            key-positions = <37 16>;
+            key-positions = <5 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_seven {
             bindings = <&kp NUMBER_7>;
-            key-positions = <37 15>;
+            key-positions = <4 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_eight {
             bindings = <&kp NUMBER_8>;
-            key-positions = <37 14>;
+            key-positions = <36 2>;
             timeout-ms = <200>;
             layers = <4>;
         };
 
         game_layer_nine {
             bindings = <&kp NUMBER_9>;
-            key-positions = <37 13>;
+            key-positions = <1 36>;
             timeout-ms = <200>;
             layers = <4>;
         };
