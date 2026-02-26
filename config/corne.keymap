@@ -7,15 +7,66 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/outputs.h>
 
 / {
     combos {
         compatible = "zmk,combos";
 
-        combo_esc {
-            timeout-ms = <50>;
-            key-positions = <0 1>;
-            bindings = <&kp ESC>;
+        game_layer_one {
+            bindings = <&kp NUMBER_1>;
+            key-positions = <1 37>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_two {
+            bindings = <&kp NUMBER_2>;
+            key-positions = <2 37>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_tree {
+            bindings = <&kp NUMBER_3>;
+            key-positions = <37 4>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_four {
+            bindings = <&kp NUMBER_4>;
+            key-positions = <37 5>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_fife {
+            bindings = <&kp NUMBER_5>;
+            key-positions = <5 36>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_six {
+            bindings = <&kp NUMBER_6>;
+            key-positions = <36 4>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_seven {
+            bindings = <&kp NUMBER_7>;
+            key-positions = <36 2>;
+            timeout-ms = <200>;
+            layers = <4>;
+        };
+
+        game_layer_eight {
+            bindings = <&kp NUMBER_8>;
+            key-positions = <36 1>;
+            timeout-ms = <200>;
+            layers = <4>;
         };
     };
 
@@ -29,29 +80,92 @@
             mods = <(MOD_LSFT|MOD_RSFT)>;
         };
 
-        kh_hs_tapdance: kh_hs_tapdance {
+        tapdance_brackets: tapdance_brackets {
             compatible = "zmk,behavior-tap-dance";
-            label = "KH_HS_TAPDANCE";
+            label = "TAPDANCE_BRACKETS";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
             bindings = <&kp LEFT_BRACKET>, <&kp RIGHT_BRACKET>;
         };
 
-        hrm: hrm {
+        holdtap_TUI: holdtap_TUI {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "tap-preferred";
+            flavor = "tap-unless-interrupted";
             tapping-term-ms = <200>;
-            quick-tap-ms = <200>;
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
+
+            label = "HOLDTAP_TUI";
+        };
+
+        tapdance_tab_esc: tapdance_tab_esc {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_TAB_ESC";
+            #binding-cells = <0>;
+            bindings = <&kp TAB>, <&kp ESC>;
+        };
+
+        tapdance_Mznak: tapdance_Mznak {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_MZNAK";
+            #binding-cells = <0>;
+            bindings = <&kp M>, <&kp RBKT>;
+        };
+
+        tapdance_slash: tapdance_slash {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_SLASH";
+            #binding-cells = <0>;
+            bindings = <&kp KP_SLASH>, <&kp PIPE>;
+        };
+
+        tapdance_braces: tapdance_braces {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_BRACES";
+            #binding-cells = <0>;
+            bindings = <&kp LBRC>, <&kp RBRC>;
+        };
+
+        tapdance_paranthesis: tapdance_paranthesis {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TAPDANCE_PARANTHESIS";
+            #binding-cells = <0>;
+            bindings = <&kp LPAR>, <&kp RIGHT_PARENTHESIS>;
+        };
+
+        holdtap_spase: holdtap_spase {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAP_SPASE";
+            bindings = <&mo>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        modmorph_slash: modmorph_slash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MODMORPH_SLASH";
+            bindings = <&tapdance_slash>, <&kp BACKSLASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        holdtap_hold_preferred: holdtap_hold_preferred {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTAP_HOLD_PREFERRED";
+            bindings = <&kp>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
         };
     };
 
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        main_layer {
             // -----------------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  | BKSP |
             // | CTRL |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |  '   |
@@ -59,10 +173,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&kp TAB    &kp C  &kp W  &kp E     &kp R  &kp T        &kp Y    &kp U  &kp I      &kp O    &kp P     &kp BSPC
-&kp LCTRL  &kp A  &kp S  &kp D     &kp D  &kp G        &kp H    &kp J  &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z  &kp X  &kp C     &kp V  &kp D        &kp N    &kp M  &kp COMMA  &kp DOT  &kp FSLH  &kp ESC
-                         &kp LGUI  &mo 1  &kp SPACE    &kp RET  &mo 2  &kp RALT
+&tapdance_tab_esc                     &kp Q  &kp W  &kp E                              &kp R                   &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSPC
+&holdtap_hold_preferred LSHIFT GRAVE  &kp A  &kp S  &kp D                              &kp F                   &kp G        &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL                             &kp Z  &kp X  &kp C                              &kp V                   &kp B        &kp N      &tapdance_Mznak  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
+                                                    &holdtap_hold_preferred LALT LGUI  &holdtap_spase 1 SPACE  &kp ENTER    &kp ENTER  &mo 2            &tog 4
             >;
         };
 
@@ -74,10 +188,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB     &kp N1        &kp N2        &kp N3        &kp N4        &kp N5          &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT   &trans        &trans        &trans        &trans        &kp B           &trans    &trans    &trans    &trans     &trans  &trans
-                                        &kp LGUI      &trans        &kp SPACE       &kp RET   &trans    &kp RALT
+&kp ESC     &kp CAPS      &trans    &kp UP     &kp LC(LEFT_SHIFT)  &kp ASTERISK       &kp EQUAL       &kp N7        &kp N8        &kp N9        &kp PG_UP  &kp BSPC
+&kp LSHIFT  &kp LG(UP)    &kp LEFT  &kp DOWN   &kp RIGHT           &kp PLUS           &kp KP_MINUS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &trans     &kp PSCRN
+&kp LCTRL   &kp LG(DOWN)  &trans    &kp LG(A)  &kp DEL             &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp PG_DN  &kp TILDE
+                                    &trans     &trans              &kp ENTER          &kp SPACE       &kp NUMBER_0  &kp KP_DOT
             >;
         };
 
@@ -89,11 +203,31 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
-&kp LCTRL  &trans    &trans  &trans    &trans    &trans       &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans    &trans  &trans    &trans    &trans       &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
-                             &kp LGUI  &trans    &kp SPACE    &kp RET    &trans     &kp RALT
+&kp ESC     &trans  &trans  &trans   &trans   &trans       &kp QUESTION  &kp AMPERSAND    &kp ASTRK    &tapdance_paranthesis  &kp RPAR            &kp BSPC
+&kp LSHIFT  &kp F1  &kp F2  &kp F3   &kp F4   &kp F5       &trans        &kp DOLLAR       &kp PERCENT  &kp CARET              &tapdance_brackets  &kp RIGHT_BRACKET
+&kp LCTRL   &kp F6  &kp F7  &kp F10  &kp F11  &kp F12      &trans        &kp EXCLAMATION  &kp AT_SIGN  &kp HASH               &tapdance_braces    &kp RIGHT_BRACE
+                            &trans   &mo 3    &kp SPACE    &trans        &trans           &trans
+            >;
+        };
+
+        layer_3 {
+            bindings = <
+&trans  &trans  &bt BT_PRV  &bt BT_NXT    &bt BT_CLR_ALL  &bt BT_CLR      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &out OUT_TOG  &out OUT_BLE    &out OUT_USB    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans      &trans        &trans          &trans          &trans  &trans  &trans  &trans  &trans  &trans
+                            &trans        &trans          &trans          &trans  &trans  &trans
+            >;
+        };
+
+        games_layer {
+            bindings = <
+&kp ESC  &kp TAB     &kp Q  &kp W     &kp E      &kp R        &kp Y   &kp U     &kp I   &kp O   &kp P   &kp BACKSPACE
+&kp F5   &kp LSHIFT  &kp A  &kp S     &kp D      &kp F        &kp G   &kp J     &kp K   &kp L   &trans  &trans
+&kp V    &kp LCTRL   &kp Z  &kp X     &kp C      &kp T        &kp N   &kp M     &trans  &trans  &trans  &trans
+                            &kp LALT  &kp SPACE  &kp ENTER    &trans  &kp LGUI  &trans
             >;
         };
     };
+
+    conditional_layers { compatible = "zmk,conditional-layers"; };
 };
