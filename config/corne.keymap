@@ -173,10 +173,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&tapdance_tab_esc                     &kp Q  &kp W  &kp E                              &kp R                   &kp T        &kp Y      &kp U            &kp I      &kp O    &kp P     &kp BSPC
-&holdtap_hold_preferred LSHIFT GRAVE  &kp A  &kp S  &kp D                              &kp F                   &kp G        &kp H      &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL                             &kp Z  &kp X  &kp C                              &kp V                   &kp B        &kp N      &tapdance_Mznak  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                                                    &holdtap_hold_preferred LALT LGUI  &holdtap_spase 1 SPACE  &kp ENTER    &kp ENTER  &mo 2            &tog 4
+&tapdance_tab_esc                     &kp Q  &kp W  &kp E                              &kp R                   &kp T        &kp Y                   &kp U                   &kp I                                      &kp O    &kp P     &kp BSPC
+&holdtap_hold_preferred LSHIFT GRAVE  &kp A  &kp S  &kp D                              &kp F                   &kp G        &kp H                   &kp J                   &kp K                                      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL                             &kp Z  &kp X  &kp C                              &kp V                   &kp B        &kp N                   &tapdance_Mznak         &kp COMMA                                  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
+                                                    &holdtap_hold_preferred LALT LGUI  &holdtap_spase 1 SPACE  &kp ENTER    &holdtap_spase 2 ENTER  &holdtap_spase 1 SPACE  &holdtap_hold_preferred LEFT_ALT LEFT_GUI
             >;
         };
 
