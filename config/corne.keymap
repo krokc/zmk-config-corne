@@ -10,57 +10,7 @@
 #include <dt-bindings/zmk/outputs.h>
 
 / {
-    combos {
-        compatible = "zmk,combos";
-
-        game_layer_one {
-            bindings = <&kp NUMBER_1>;
-            key-positions = <1 37>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_two {
-            bindings = <&kp NUMBER_2>;
-            key-positions = <2 37>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_tree {
-            bindings = <&kp NUMBER_3>;
-            key-positions = <37 4>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_four {
-            bindings = <&kp NUMBER_4>;
-            key-positions = <37 5>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_fife {
-            bindings = <&kp NUMBER_5>;
-            key-positions = <5 36>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_six {
-            bindings = <&kp NUMBER_6>;
-            key-positions = <36 4>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_seven {
-            bindings = <&kp NUMBER_7>;
-            key-positions = <36 2>;
-            timeout-ms = <200>;
-        };
-
-        game_layer_eight {
-            bindings = <&kp NUMBER_8>;
-            key-positions = <36 1>;
-            timeout-ms = <200>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     behaviors {
         ss_hs_modmorph: ss_hs_modmorph {
