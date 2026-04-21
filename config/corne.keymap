@@ -115,10 +115,10 @@
             //                    | GUI | LWR | SPC |   | ENT | RSE  | ALT |
 
             bindings = <
-&tapdance_tab_esc                     &kp Q  &kp W  &kp E                                  &kp R                   &kp T                     &kp Y   &kp U            &kp I      &kp O    &kp P     &kp BSPC
-&holdtap_hold_preferred LSHIFT GRAVE  &kp A  &kp S  &kp D                                  &kp F                   &kp G                     &kp H   &kp J            &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LCTRL                             &kp Z  &kp X  &kp C                                  &kp V                   &kp B                     &kp N   &tapdance_Mznak  &kp COMMA  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
-                                                    &holdtap_hold_preferred LWIN LEFT_ALT  &holdtap_spase 1 SPACE  &holdtap_spase 2 ENTER    &trans  &trans           &trans
+&tapdance_tab_esc                     &kp Q  &kp W  &kp E                                  &kp R                   &kp T                     &kp Y                   &kp U                   &kp I                                      &kp O    &kp P     &kp BSPC
+&holdtap_hold_preferred LSHIFT GRAVE  &kp A  &kp S  &kp D                                  &kp F                   &kp G                     &kp H                   &kp J                   &kp K                                      &kp L    &kp SEMI  &kp SQT
+&kp LCTRL                             &kp Z  &kp X  &kp C                                  &kp V                   &kp B                     &kp N                   &tapdance_Mznak         &kp COMMA                                  &kp DOT  &kp FSLH  &kp LEFT_BRACKET
+                                                    &holdtap_hold_preferred LWIN LEFT_ALT  &holdtap_spase 1 SPACE  &holdtap_spase 2 ENTER    &holdtap_spase 1 ENTER  &holdtap_spase 2 SPACE  &holdtap_hold_preferred LEFT_ALT LEFT_WIN
             >;
         };
 
@@ -133,7 +133,7 @@
 &kp ESC     &kp CAPS      &trans     &kp UP          &kp LC(LEFT_SHIFT)  &kp ASTERISK       &kp EQUAL       &kp N7        &kp N8        &kp N9        &kp PAGE_UP    &kp BSPC
 &kp LSHIFT  &kp LG(UP)    &kp LEFT   &kp DOWN        &kp RIGHT           &kp PLUS           &kp KP_MINUS    &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp PAGE_DOWN  &kp PSCRN
 &kp LCTRL   &kp LG(DOWN)  &kp LG(V)  &kp LS(DELETE)  &kp DEL             &modmorph_slash    &kp UNDERSCORE  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp NUMBER_0   &kp TILDE
-                                     &kp LEFT_ALT    &kp SPACE           &trans             &trans          &trans        &trans
+                                     &kp LEFT_ALT    &kp SPACE           &trans             &trans          &kp NUMBER_0  &kp DOT
             >;
         };
 
