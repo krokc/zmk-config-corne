@@ -156,10 +156,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans  &bt BT_PRV  &bt BT_NXT    &bt BT_CLR_ALL  &bt BT_CLR      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF  &ext_power EP_TOG  &trans  &trans  &trans
-&trans  &trans  &trans      &out OUT_TOG  &out OUT_BLE    &out OUT_USB    &trans           &trans           &trans             &trans  &trans  &trans
-&trans  &trans  &trans      &trans        &trans          &trans          &trans           &trans           &trans             &trans  &trans  &trans
-                            &trans        &trans          &trans          &trans           &trans           &trans
+&trans  &trans  &bt BT_PRV  &bt BT_NXT    &bt BT_CLR_ALL  &bt BT_CLR      &rgb_ug RGB_TOG  &rgb_ug RGB_EFF                    &ext_power EP_TOG  &trans  &trans  &trans
+&trans  &trans  &trans      &out OUT_TOG  &out OUT_BLE    &out OUT_USB    &trans           &rgb_ug RGB_COLOR_HSB(276,100,50)  &trans             &trans  &trans  &trans
+&trans  &trans  &trans      &trans        &trans          &trans          &trans           &trans                             &trans             &trans  &trans  &trans
+                            &trans        &trans          &trans          &trans           &trans                             &trans
             >;
         };
     };
